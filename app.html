@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#fcf8f3" />
+    <title>OYNA — prototip</title>
+    <meta name="description" content="OYNA prototipi: AI ustoz, 90 kunlik reja, darslar va ota-ona ko'rinishi." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="app-body">
+    <div class="app-shell">
+      <div class="app-top">
+        <a class="logo" href="index.html" style="gap: 8px; font-size: 16px">
+          <span class="logo__mark">O</span> OYNA
+        </a>
+        <div class="app-top__right">
+          <span class="xp-pill" id="xpPill">0 XP</span>
+          <button class="icon-btn" id="resetBtn" type="button" title="Demoni qayta boshlash" aria-label="Demoni qayta boshlash">↻</button>
+        </div>
+      </div>
+
+      <div class="views">
+        <!-- ONBOARDING -->
+        <section class="view" id="v-onboard">
+          <div class="ob-head">
+            <span class="pill">1-demo · 30 soniya</span>
+            <h2 class="h3" style="margin-top: 10px">Assalomu alaykum! Men Oy — sizning AI ustozingiz.</h2>
+            <p class="small muted" style="margin-top: 6px">
+              Uch savolga javob bering, men sizga 90 kunlik shaxsiy reja tuzaman.
+            </p>
+          </div>
+
+          <div class="ob-step" id="ob1">
+            <div class="field">
+              <label for="obName">Ismingiz</label>
+              <input class="input" id="obName" type="text" placeholder="Masalan: Nilufar" autocomplete="given-name" />
+            </div>
+            <div class="field">
+              <label for="obRegion">Qayerdan siz?</label>
+              <select class="select" id="obRegion"></select>
+            </div>
+            <div class="ob-actions">
+              <button class="btn btn--primary btn--block" type="button" id="obNext1">Davom etish →</button>
+            </div>
+          </div>
+
+          <div class="ob-step" id="ob2">
+            <div class="field">
+              <label>Qaysi yo'nalish qiziqtiradi?</label>
+              <div class="opt-grid" id="trackGrid"></div>
+            </div>
+            <div class="ob-actions">
+              <button class="btn btn--ghost" type="button" id="obBack2">←</button>
+              <button class="btn btn--primary" type="button" id="obNext2">Davom etish →</button>
+            </div>
+          </div>
+
+          <div class="ob-step" id="ob3">
+            <div class="field">
+              <label>Kuniga qancha vaqt ajratasiz?</label>
+              <div class="opt-grid" id="timeGrid"></div>
+            </div>
+            <div class="field">
+              <label>Qulay vaqt</label>
+              <div class="opt-grid" id="dayGrid"></div>
+            </div>
+            <div class="ob-actions">
+              <button class="btn btn--ghost" type="button" id="obBack3">←</button>
+              <button class="btn btn--teal" type="button" id="obFinish">Rejamni tuz ✨</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="view" id="v-home"></section>
+        <section class="view" id="v-chat"></section>
+        <section class="view" id="v-roadmap"></section>
+        <section class="view" id="v-lesson"></section>
+        <section class="view" id="v-mentor"></section>
+        <section class="view" id="v-parent"></section>
+      </div>
+
+      <nav class="app-tabs" id="tabs" aria-label="Bo'limlar">
+        <button class="tab" type="button" data-go="home"><i>🏠</i>Uy</button>
+        <button class="tab" type="button" data-go="chat"><i>💬</i>Oy AI</button>
+        <button class="tab" type="button" data-go="roadmap"><i>🗺️</i>Reja</button>
+        <button class="tab" type="button" data-go="mentor"><i>🤝</i>Mentor</button>
+        <button class="tab" type="button" data-go="parent"><i>👨‍👩‍👧</i>Ota-ona</button>
+      </nav>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
